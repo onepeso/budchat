@@ -18,13 +18,13 @@
       }
     ],
     "security": {
-      "csp": null
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;"
     }
   },
   "bundle": {
     "active": true,
     "targets": "all",
-    "createUpdaterArtifacts": true,
+    "createUpdaterArtifacts": false,
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
@@ -32,13 +32,5 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ]
-  },
-  "plugins": {
-    "updater": {
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEU2MjI4NEFDNkE5NjBFNDIKUldSQ0RwWnFySVFpNXBsNlI3MmZDZnQveGJraXkwRWRtQ2krVEVhdjlPekxiekQzNHFDRkdjMFQK",
-      "endpoints": [
-        "https://raw.githubusercontent.com/onepeso/budchat-updates/main/updates.json"
-      ]
-    }
   }
 }
