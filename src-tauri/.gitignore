@@ -1,0 +1,36 @@
+# ========================
+# Rust Build Artifacts
+# ========================
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# ========================
+# Tauri-Specific Files
+# ========================
+/bin/
+/icons/
+*.app
+*.exe
+*.dmg
+*.deb
+*.rpm
+*.AppImage
+*.msi
+*.zip
+*.tar.gz
+*.sig
+
+# ========================
+# Debug Files
+# ========================
+*.pdb
+*.dll
+*.lib
+*.exp
+*.ilk
+
+# ========================
+# Environment Files
+# ========================
+.env

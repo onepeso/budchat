@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --primary-100: #0084ff;
+    --primary-200: #339dff;
+    --primary-300: #66b5ff;
+    --accent-100: #ffbe00;
+    --accent-200: #ffbe00;
+    --accent-300: #ffbe00;
+    --background-100: #f9fcff;
+    --background-200: #e0efff;
+    --background-300: #c6e3ff;
+    --text-100: #001e3a;
+    --text-200: #00386d;
+    --text-300: #0053a0;
+}
+
+body {
+    background: #f9fcff;
+    overflow: hidden;
+}
