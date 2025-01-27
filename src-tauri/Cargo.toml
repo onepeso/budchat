@@ -27,5 +27,4 @@ serde_json = "1"
 tokio = { version = "0.2.0-alpha.6", features = ["full"] }
 
 [target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
-tauri-plugin-updater = "2"
 
