@@ -3,7 +3,7 @@ import { supabasePromise } from "./supabase"; // Import the promise
 
 const UserStatus = () => {
   const [users, setUsers] = useState<any[]>([]);
-  const [currentUser, setCurrentUser] = useState<any>(null);
+  const [, setCurrentUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [supabase, setSupabase] = useState<any>(null); // State to hold the Supabase client
 
@@ -101,14 +101,14 @@ const UserStatus = () => {
   }
 
   return (
-    <div className="text-white">
+    <div className="text-black dark:text-white">
       <h3 className="mb-4 ml-2 text-lg font-semibold">Members</h3>
       {/* Scrollable list of users */}
       <ul className="space-y-2 overflow-y-auto max-h-[calc(100vh-16rem)]">
         {users.map((user) => (
           <li
             key={user.id}
-            className="flex items-center justify-between p-2 transition-colors rounded-lg hover:bg-gray-700"
+            className="flex items-center justify-between p-2 transition-colors rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-[#0000005b]"
           >
             <div className="flex items-center space-x-3">
               <span

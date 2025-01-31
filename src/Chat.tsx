@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import Messages from "./Messages";
-import MessageInput from "./MessageInput";
 import UserStatus from "./UserStatus";
 import { supabasePromise } from "./supabase"; // Import the promise
 import { useNavigate } from "react-router-dom"; // For navigation
+import { ModeToggle } from "./components/custom/mode-toggle";
+import UpdateAlert from "./utils/updateAlert";
 
 const Chat = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -40,7 +41,7 @@ const Chat = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-900">
+    <div className="flex h-screen ">
       {/* Main Chat Area */}
       <div className="flex flex-col flex-1 overflow-hidden">
         {/* Messages */}
@@ -51,7 +52,7 @@ const Chat = () => {
 
       {/* Right Sidebar */}
       <div
-        className={`fixed inset-y-0 right-0 w-64 bg-gray-800 border-l border-gray-700 transition-transform duration-200 ease-in-out transform ${
+        className={`fixed inset-y-0 right-0 w-64  border-l border-gray-200 dark:border-[#0b101f] dark:bg-transparent transition-transform duration-200 ease-in-out transform bg-gray-100 ${
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
         } md:translate-x-0 md:relative`}
       >
@@ -64,20 +65,22 @@ const Chat = () => {
         </button>
 
         {/* Sidebar Content */}
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full ">
+          <UpdateAlert />
           {/* UserStatus Component */}
-          <div className="flex-1 p-4 overflow-y-auto">
+          <div className="flex-1 p-4 overflow-y-auto ">
             <UserStatus />
           </div>
 
           {/* Logout Button */}
-          <div className="p-4 border-t border-gray-700">
+          <div className="p-4 mb-3 border-t border-gray-200 dark:border-[#0b101f]">
             <button
               onClick={handleLogout}
-              className="w-full px-4 py-2 font-semibold text-white transition-colors bg-gray-600 rounded-lg hover:bg-purple-700"
+              className="w-1/2 px-4 py-2 mr-2 font-semibold text-white transition-colors bg-gray-400 rounded-lg dark:bg-blue-950 dark:hover:bg-blue-900 hover:bg-gray-500"
             >
               Logout
             </button>
+            <ModeToggle />
           </div>
         </div>
       </div>
