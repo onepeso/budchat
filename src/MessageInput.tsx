@@ -125,12 +125,6 @@ const MessageInput: React.FC<MessageInputProps> = ({
               onChange={(e) => setMessage(e.target.value)}
               disabled={loading}
             />
-            <button
-              onClick={() => setShowPicker(!showPicker)}
-              className="p-2 text-xl text-white hover:text-purple-400"
-            >
-              😊
-            </button>
 
             <button
               type="submit"
@@ -143,6 +137,12 @@ const MessageInput: React.FC<MessageInputProps> = ({
             </button>
           </div>
         </form>
+        <button
+          onClick={() => setShowPicker(!showPicker)}
+          className="absolute p-2 text-xl text-white bottom-3 right-16 hover:text-purple-400"
+        >
+          😊
+        </button>
       </div>
     </div>
   );
