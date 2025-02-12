@@ -89,7 +89,7 @@ const MessageInput: React.FC<MessageInputProps> = ({
     <div className="sticky bottom-0 w-full p-2 rounded-lg">
       <div className="flex items-center max-w-4xl mx-auto space-x-2">
         {showPicker && (
-          <div className="absolute z-10 right-5 bottom-24">
+          <div className="absolute left-0 z-10 bottom-24">
             <Picker data={data} onEmojiSelect={handleEmojiSelect} />
           </div>
         )}
